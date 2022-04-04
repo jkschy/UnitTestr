@@ -1,4 +1,4 @@
-from Runners.helpers.JsonHelp import getSetting
+from UnitTestr.helpers.JsonHelp import getSetting
 def log(msg):
     """
     Logs the message with the prefix Log

@@ -1,7 +1,7 @@
 import os
 from inspect import getmembers, isfunction
-from Runners.helpers.JsonHelp import verifySettings
-from Runners.helpers import Logger
+from UnitTestr.helpers.JsonHelp import verifySettings
+from UnitTestr.helpers import Logger
 
 
 class GenericRunner:

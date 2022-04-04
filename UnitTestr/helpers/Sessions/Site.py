@@ -1,6 +1,6 @@
 from selenium import webdriver
-from Runners.helpers.Enums import By
-from Runners.helpers import GenericElement, JsonHelp
+from UnitTestr.helpers.Enums import By
+from UnitTestr.helpers import GenericElement, JsonHelp
 
 
 class Site:

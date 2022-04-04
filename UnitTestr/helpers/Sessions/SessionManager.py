@@ -1,5 +1,5 @@
-from Runners.helpers.Sessions.Site import Site
-from Runners.helpers.exceptions import SessionKeyTaken
+from UnitTestr.helpers.Sessions.Site import Site
+from UnitTestr.helpers.exceptions import SessionKeyTaken
 
 
 class SessionManager:
