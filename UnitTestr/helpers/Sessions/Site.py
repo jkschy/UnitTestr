@@ -24,7 +24,7 @@ class Site:
 
     def getElement(self, by: By, element_id: str, timeout_ms=10000):
         """
-        Attemots to get an element from the default browser
+        Attempts to get an element from the default browser
         :param by: The css selector
         :param element_id: The Selector of the element you want
         :param timeout_ms: the timeout to wait

@@ -12,11 +12,13 @@ class SessionManager:
     def new_session(self, url=None, key="first"):
         # Appends a new session if the key does not exist, adds url if there is an inputted url
         if not self._session_exists(key):
-            return self.sessions.append((key, Site(url if url is not None else None)))
+            site = Site(url if url is not None else None)
+            self.sessions.append((key, site))
+            return site
         else:
             raise SessionKeyTaken(key)
 
-    def getSession(self, key="first"):
+    def get_session(self, key="first"):
         session = [session for session in self.sessions if session[0] == key]
         return session[0][1] if session.__len__() == 1 else None
 

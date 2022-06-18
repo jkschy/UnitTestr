@@ -1,4 +1,5 @@
 {
   "default_url": "https://www.saucedemo.com/",
-  "logging_level": "minimal"
+  "logging_level": "minimal",
+  "dir": "./Tests"
 }

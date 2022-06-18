@@ -1,8 +1,9 @@
 import os
+import sys
 from inspect import getmembers, isfunction
-from UnitTestr.helpers.JsonHelp import verifySettings
-from UnitTestr.helpers import Logger
-
+from helpers.JsonHelp import verifySettings, getSetting
+from helpers import Logger
+sys.path.append(os.getcwd())
 
 class GenericRunner:
     results: list[tuple] = []
@@ -14,12 +15,12 @@ class GenericRunner:
         verifySettings()
 
     def run_all_files(self):
-        for file in os.listdir("../Tests"):
+        for file in os.listdir(getSetting("dir")):
             # Verify all files are python files
             if file.endswith(".py") and not file.startswith("__init__"):
 
                 # Import the file
-                file = __import__(f'Tests.{file.split(".")[0]}', fromlist=["test_login"])
+                file = __import__(f'Tests.{file.split(".")[0]}', fromlist=["tests"])
 
                 # Gets all functions from the files
                 tests = getmembers(file, isfunction)
